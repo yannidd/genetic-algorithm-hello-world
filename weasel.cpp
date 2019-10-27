@@ -46,10 +46,12 @@ int main()
   srand(time(NULL));
 
   int stop = 500;
-  //std::vector<int> max_mutationss = { 1, 2, 3, 4 };
   std::vector<int> max_mutationss = { 1, 2, 3, 4 };
-  //std::vector<int> population_sizes = { 10, 20, 50, 100, 200, 500 };
-  std::vector<int> population_sizes = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500 };
+  //std::vector<int> population_sizes = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500 };
+  std::vector<int> population_sizes = {};
+  for (int i = 10; i <= 500; i += 10) {
+    population_sizes.push_back(i);
+  }
 
   // Hill climber.
   for (int j = 0; j < max_mutationss.size(); j++) {
